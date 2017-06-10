@@ -20,12 +20,19 @@
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
     "rc": "1.0.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9"
   },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
   "scripts": {
-    "debug": "node debug app.js",
-    "start": "node app.js"
+    "start:server": "node_modules/.bin/babel-node app.js",
+    "start:client": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scrwipts test --env=jsdom"
   },
   "main": "app.js",
   "repository": {
