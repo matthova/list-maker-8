@@ -19,6 +19,7 @@
 .env
 assets/build/*
 react
+src/styles/styles.css
 
 
 ################################################
