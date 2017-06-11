@@ -1,3 +1,2 @@
 # list-maker-8
-
-a [Sails](http://sailsjs.org) application
+<img src="https://travis-ci.org/matthova/list-maker-8.svg?branch=master"/>
