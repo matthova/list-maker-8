@@ -20,7 +20,7 @@
 assets/build/*
 react
 src/styles/styles.css
-
+coverage
 
 ################################################
 # Local Configuration
