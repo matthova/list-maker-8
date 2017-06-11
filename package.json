@@ -62,7 +62,7 @@
     "prod:launch": "NODE_ENV=production node app",
     "test": "npm run test:client && npm run test:server",
     "test:client": "react-scripts test --coverage --env=jsdom",
-    "test:server": "node node_modules/.bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
+    "test:server": "npm run prod:server && node node_modules/.bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
   },
   "main": "app.js",
   "repository": {
