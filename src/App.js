@@ -4,7 +4,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      todos: [{description: 'one', id: 100}],
+      todos: [],
     };
   }
 
