@@ -51,6 +51,8 @@
   "scripts": {
     "styles:build": "node_modules/.bin/node-sass --output src/styles src/styles.scss",
     "styles:watch": "node_modules/.bin/node-sass --watch --output src/styles src/styles.scss",
+    "debug": "npm run debug:build && node --inspect-brk app.js",
+    "debug:build": "npm run prod:client && npm run prod:server",
     "dev": "npm run styles:build && npm run styles:watch & npm run dev:server & npm run dev:client",
     "dev:styles": "react-scripts start",
     "dev:client": "react-scripts start",
@@ -58,7 +60,7 @@
     "prod": "npm run prod:client && npm run prod:server && npm run prod:launch",
     "prod:styles": "node_modules/.bin/node-sass --output assets/styles src/scss/styles.scss",
     "prod:client": "node_modules/.bin/react-scripts build && rm -rf assets/build && mv build assets",
-    "prod:server": "node_modules/.bin/babel -d react src/**/*.js",
+    "prod:server": "node_modules/.bin/babel -d react src/**/*.js -s",
     "prod:launch": "NODE_ENV=production node app",
     "test": "npm run test:client && npm run test:server",
     "test:client": "react-scripts test --coverage --env=jsdom",
