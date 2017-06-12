@@ -7,5 +7,6 @@
     "express",
     "heroku"
   ],
+  "node": "7.9.0",
   "image": "heroku/nodejs"
 }
