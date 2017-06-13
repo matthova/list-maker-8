@@ -29,8 +29,8 @@ function generatePostgresqlObject() {
   const database = local ? 'list_maker_8' : 'postgres';
 
   const pgObject = { adapter, url, address, ssl, database };
+  console.log(pgObject);
   return pgObject;
-
 }
 
 module.exports.connections = {
