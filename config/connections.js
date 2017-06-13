@@ -24,12 +24,13 @@ function generatePostgresqlObject() {
 
   const adapter = 'sails-postgresql';
   const url = local ? undefined : process.env.DATABASE_URL;
-  const address = local ? process.env.DATABASE_URL : undefined;
+  const address = process.env.DATABASE_URL;
   const ssl = !local;
   const database = local ? 'list_maker_8' : 'postgres';
 
   const pgObject = { adapter, url, address, ssl, database };
   return pgObject;
+
 }
 
 module.exports.connections = {
