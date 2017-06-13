@@ -67,7 +67,7 @@
     "prod:styles": "node_modules/.bin/node-sass --output assets/styles src/scss/styles.scss",
     "prod:client": "node_modules/.bin/react-scripts build && rm -rf assets/build && mv build assets",
     "prod:server": "node_modules/.bin/babel -d react src/**/*.js -s",
-    "prod:launch": "NODE_ENV=production node app",
+    "prod:launch": "NODE_ENV=production node app.js",
     "test": "npm run test:client && npm run test:server",
     "test:client": "react-scripts test --coverage --env=jsdom",
     "test:server": "npm run prod:server && node node_modules/.bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
