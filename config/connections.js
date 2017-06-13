@@ -26,10 +26,9 @@ function generatePostgresqlObject() {
   const url = local ? undefined : process.env.DATABASE_URL;
   const address = local ? process.env.DATABASE_URL : undefined;
   const ssl = !local;
-  const database = local ? 'sails_todo' : undefined;
+  const database = local ? 'list_maker_8' : 'postgres';
 
   const pgObject = { adapter, url, address, ssl, database };
-  console.log('pgobject', pgObject, process.env);
   return pgObject;
 }
 
