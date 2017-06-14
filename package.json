@@ -63,7 +63,7 @@
     "dev": "npm run styles:build && npm run styles:watch & npm run dev:server & npm run dev:client",
     "dev:client": "react-scripts start",
     "dev:server": "node_modules/.bin/nodemon node_modules/.bin/babel-node app.js",
-    "prod": "npm run prod:client && npm run prod:server && npm run prod:launch",
+    "prod": "npm run prod:styles && npm run prod:client && npm run prod:server && npm run prod:launch",
     "prod:styles": "node_modules/.bin/node-sass --output assets/styles src/styles/styles.scss",
     "prod:client": "node_modules/.bin/react-scripts build && rm -rf assets/build && mv build assets",
     "prod:server": "node_modules/.bin/babel -d react src/**/*.js -s",
