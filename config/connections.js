@@ -29,7 +29,7 @@ function generatePostgresqlObject() {
   const database = local ? 'list_maker_8' : undefined;
 
   const pgObject = { adapter, url, address, ssl, database };
-  console.log(pgObject);
+  console.log(pgObject, process.env);
   return pgObject;
 }
 
