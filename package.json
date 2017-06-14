@@ -55,7 +55,7 @@
   },
   "proxy": "http://localhost:1337",
   "scripts": {
-    "cleanup": "rm -rf build & rm -rf react & rm -rf assets/build",
+    "cleanup": "rm -rf build & rm -rf react & rm -rf assets/build & find src/styles -type f -name \"*.css\" -delete",
     "styles:build": "node_modules/.bin/node-sass --output src/styles src/styles/styles.scss",
     "styles:watch": "node_modules/.bin/node-sass --watch --recursive --output src/styles src/styles",
     "debug": "npm run debug:build && node --inspect-brk app.js",
@@ -64,7 +64,7 @@
     "dev:client": "react-scripts start",
     "dev:server": "node_modules/.bin/nodemon node_modules/.bin/babel-node app.js",
     "prod": "npm run prod:styles && npm run prod:client && npm run prod:server && npm run prod:launch",
-    "prod:styles": "node_modules/.bin/node-sass --output assets/styles src/styles/styles.scss",
+    "prod:styles": "npm run styles:build && node_modules/.bin/node-sass --output assets/styles src/styles/styles.scss",
     "prod:client": "node_modules/.bin/react-scripts build && rm -rf assets/build && mv build assets",
     "prod:server": "node_modules/.bin/babel -d react src/**/*.js -s",
     "prod:launch": "NODE_ENV=production node app.js",
