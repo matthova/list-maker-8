@@ -76,6 +76,9 @@
     "type": "git",
     "url": "git://github.com/hovanem/list-maker-8.git"
   },
+  "engines": {
+    "node": "7.x"
+  },
   "author": "hovanem",
   "license": ""
 }
