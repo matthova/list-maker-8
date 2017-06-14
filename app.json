@@ -10,8 +10,5 @@
   "engines": {
     "node": "8.x"
   },
-  "scripts": {
-    "heroku-postbuild": "node node_modules/.bin/grunt db:migrate:up"
-  },
   "image": "heroku/nodejs"
 }

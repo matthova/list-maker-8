@@ -18,6 +18,7 @@
 ################################################
 .env
 assets/build/*
+assets/styles/styles.css
 react
 src/styles/styles.css
 coverage
