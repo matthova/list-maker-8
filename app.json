@@ -7,8 +7,5 @@
     "express",
     "heroku"
   ],
-  "engines": {
-    "node": "8.x"
-  },
   "image": "heroku/nodejs"
 }
