@@ -1,4 +1,8 @@
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch (ex) {
+  // Add error handling here, if you want
+}
 /**
  * app.js
  *

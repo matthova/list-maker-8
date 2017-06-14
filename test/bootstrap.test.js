@@ -1,5 +1,9 @@
 /* global before, after */
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch (ex) {
+  // Add error handling here, if you want
+}
 global.Promise = require('bluebird');
 const sails = require('sails');
 
