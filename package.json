@@ -14,6 +14,14 @@
     "db-migrate-pg": "^0.1.11",
     "dotenv": "^4.0.0",
     "ejs": "2.3.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "should": "^11.2.1",
     "fs-promise": "^2.0.3",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -43,16 +51,6 @@
     "sails-disk": "~0.10.9",
     "sails-postgresql": "^0.11.4"
   },
-  "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "mocha": "^3.4.2",
-    "nodemon": "^1.11.0",
-    "should": "^11.2.1"
-  },
   "proxy": "http://localhost:1337",
   "scripts": {
     "cleanup": "rm -rf build & rm -rf react & rm -rf assets/build & find src/styles -type f -name \"*.css\" -delete",
@@ -78,7 +76,7 @@
     "url": "git://github.com/hovanem/list-maker-8.git"
   },
   "engines": {
-    "node": "7.x"
+    "node": "8.x"
   },
   "author": "matthova",
   "license": ""
