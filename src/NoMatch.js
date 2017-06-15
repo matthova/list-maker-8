@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 //import './App.css'
 
 class NoMatch extends Component {
@@ -7,8 +7,8 @@ class NoMatch extends Component {
       <div>
         Page not found
       </div>
-    )
+    );
   }
 }
 
-export default NoMatch
+export default NoMatch;

@@ -16,16 +16,17 @@
  *
  */
 module.exports = function(grunt) {
-
-  grunt.config.set('sync', {
+  grunt.config.set("sync", {
     dev: {
-      files: [{
-        cwd: './assets',
-        src: ['**/*.!(coffee|less)'],
-        dest: '.tmp/public'
-      }]
+      files: [
+        {
+          cwd: "./assets",
+          src: ["**/*.!(coffee|less)"],
+          dest: ".tmp/public"
+        }
+      ]
     }
   });
 
-  grunt.loadNpmTasks('grunt-sync');
+  grunt.loadNpmTasks("grunt-sync");
 };

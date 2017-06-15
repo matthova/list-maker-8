@@ -11,7 +11,6 @@
  */
 
 module.exports.log = {
-
   /***************************************************************************
   *                                                                          *
   * Valid `level` configs: i.e. the minimum log level to capture with        *
@@ -24,6 +23,5 @@ module.exports.log = {
   *                                                                          *
   ***************************************************************************/
 
-  level: 'silly'
-
+  level: "silly"
 };

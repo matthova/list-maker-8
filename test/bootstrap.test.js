@@ -1,24 +1,26 @@
 /* global before, after */
 try {
-  require('dotenv').config();
+  require("dotenv").config();
 } catch (ex) {
   // Add error handling here, if you want
 }
-global.Promise = require('bluebird');
-const sails = require('sails');
+global.Promise = require("bluebird");
+const sails = require("sails");
 
 let rc;
 try {
-  rc = require('rc');
+  rc = require("rc");
 } catch (e0) {
   try {
-    rc = require('sails/node_modules/rc');
+    rc = require("sails/node_modules/rc");
   } catch (e1) {
-    console.error('Could not find dependency: `rc`.');
-    console.error('Your `.sailsrc` file(s) will be ignored.');
-    console.error('To resolve this, run:');
-    console.error('npm install rc --save');
-    rc = function () { return {}; };
+    console.error("Could not find dependency: `rc`.");
+    console.error("Your `.sailsrc` file(s) will be ignored.");
+    console.error("To resolve this, run:");
+    console.error("npm install rc --save");
+    rc = function() {
+      return {};
+    };
   }
 }
 
@@ -26,26 +28,31 @@ before(function sailsStartHook(done) {
   // Increase the Mocha timeout so that Sails has enough time to lift.
   this.timeout(10000);
 
-  sails.lift({
-    connections: {
-      // Replace the following with whatever suits you.
-      testDb: {
-        adapter: 'sails-postgresql',
-        host: 'localhost',
-        database: process.env.DATABASE_NAME + '_test',
+  sails.lift(
+    {
+      connections: {
+        // Replace the following with whatever suits you.
+        testDb: {
+          adapter: "sails-postgresql",
+          host: "localhost",
+          database: process.env.DATABASE_NAME + "_test"
+        }
       },
+      models: {
+        connection: "testDb",
+        migrate: "drop"
+      }
     },
-    models: {
-      connection: 'testDb',
-      migrate: 'drop',
-    },
-  }, (err) => {
-    if (err) { return done(err); }
-    // here you can load fixtures, etc.
-    return done(err, sails);
-  });
+    err => {
+      if (err) {
+        return done(err);
+      }
+      // here you can load fixtures, etc.
+      return done(err, sails);
+    }
+  );
 });
 
-after((done) => {
+after(done => {
   sails.lower(done);
 });

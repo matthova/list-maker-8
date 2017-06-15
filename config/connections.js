@@ -20,20 +20,19 @@
  */
 
 function generatePostgresqlObject() {
-  const local = String(process.env.DATABASE_URL).indexOf('localhost') !== -1;
+  const local = String(process.env.DATABASE_URL).indexOf("localhost") !== -1;
 
-  const adapter = 'sails-postgresql';
+  const adapter = "sails-postgresql";
   const url = local ? undefined : process.env.DATABASE_URL;
   const address = local ? process.env.DATABASE_URL : undefined;
   const ssl = !local;
-  const database = local ? 'list_maker_8' : undefined;
+  const database = local ? "list_maker_8" : undefined;
 
   const pgObject = { adapter, url, address, ssl, database };
   return pgObject;
 }
 
 module.exports.connections = {
-
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
@@ -87,12 +86,11 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: generatePostgresqlObject(),
+  somePostgresqlServer: generatePostgresqlObject()
 
   /***************************************************************************
   *                                                                          *
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
-
 };

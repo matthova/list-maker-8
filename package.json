@@ -14,14 +14,6 @@
     "db-migrate-pg": "^0.1.11",
     "dotenv": "^4.0.0",
     "ejs": "2.3.4",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "mocha": "^3.4.2",
-    "nodemon": "^1.11.0",
-    "should": "^11.2.1",
     "fs-promise": "^2.0.3",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -37,8 +29,10 @@
     "grunt-sync": "0.5.2",
     "include-all": "^1.0.0",
     "is-browser": "^2.0.1",
+    "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
     "node-uuid": "^1.4.8",
+    "nodemon": "^1.11.0",
     "rc": "1.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -49,7 +43,8 @@
     "sails": "~0.12.13",
     "sails-db-migrate": "^1.5.0",
     "sails-disk": "~0.10.9",
-    "sails-postgresql": "^0.11.4"
+    "sails-postgresql": "^0.11.4",
+    "should": "^11.2.1"
   },
   "proxy": "http://localhost:1337",
   "scripts": {
@@ -79,5 +74,8 @@
     "node": "8.x"
   },
   "author": "matthova",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "prettier": "^1.4.4"
+  }
 }

@@ -21,5 +21,5 @@
  */
 
 module.exports.routes = {
-  'get /*': { controller: 'IndexController', skipAssets: true },
+  "get /*": { controller: "IndexController", skipAssets: true }
 };
